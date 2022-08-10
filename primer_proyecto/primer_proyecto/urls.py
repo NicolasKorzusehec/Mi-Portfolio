@@ -18,17 +18,17 @@ from django.urls import path
 
 ##primer_proyecto/urls.py
 
-#del modulo app_prueba (fijarse que tiene __init.py__) importamos el módulo views
+#del modulo app_prueba (fijarse que tiene __init.py__) importamos el módulo views 
 #es decir, de la app prueba importamos las vistas. 
-from app_prueba import views
+from app_prueba import views as pruebas_views
 
 urlpatterns = [
     #Creamos un patrón url, en la raíz del sitio (cadena vacía) desde el que llamaremos 
     # a la vista views.home que tiene el nombre home.
-    path('',views.home, name="home"), 
-    path('',views.about, name="about"), 
-    path('',views.portfolio, name="portfolio"), 
-    path('',views.contact, name="contact"), 
+    path('',pruebas_views.home, name="home"), 
+    path('',pruebas_views.about, name="about"), 
+    path('',pruebas_views.portfolio, name="portfolio"), 
+    path('',pruebas_views.contact, name="contact"), 
 
     path('admin/', admin.site.urls),
 ]
