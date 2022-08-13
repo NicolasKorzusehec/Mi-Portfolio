@@ -23,6 +23,7 @@ from django.urls import path
 #es decir, de la app prueba importamos las vistas. 
 from app_prueba import views as pruebas_views
 from portfolio import views as portfolio_views
+from contact import views as contact_views
 
 urlpatterns = [
     #Creamos un patrón url, en la raíz del sitio (cadena vacía) desde el que llamaremos 
@@ -30,7 +31,7 @@ urlpatterns = [
     path('',pruebas_views.home, name="home"), 
     path('about/',pruebas_views.about, name="about"), 
     path('portfolio/',portfolio_views.portfolio, name="portfolio"), 
-    path('contact/',pruebas_views.contact, name="contact"), 
+    path('contact/',contact_views.contact, name="contact"), 
 
     path('admin/', admin.site.urls),
 ]
