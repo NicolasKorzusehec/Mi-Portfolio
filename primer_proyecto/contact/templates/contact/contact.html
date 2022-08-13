@@ -13,5 +13,38 @@
     <span class="subheading">Envianos tus ideas</span>
 {% endblock %}
 
+
+
 {% block content %}
+<!--Ahora modificamos el block content del template contact.html usando un bloque if que solo se mostrara cuando la vista sea generada con la variable enviado-->
+    {% if enviado %}
+    <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p><b>Gracias {{enviado}} !</b></p>
+        <p><b>Tu mensaje se envio correctamente, en breve nos pondremos en contacto</b></p>
+        
+    </div>
+
+    
+    {% else %}
+    <div class="row"> 
+        <div class="col-lg-8 col-md-10 mx-auto">
+        <!-- Formulario de contacto-->
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    
+                    <table>
+                        {{form.as_p}}
+                    </table>
+                    
+                    <input type="submit" value="Enviar" />
+                    
+                </div>
+        
+            </form>
+        <!--{{request.POST}}-->
+        </div>
+    </div>
+    {% endif %}
 {% endblock %}

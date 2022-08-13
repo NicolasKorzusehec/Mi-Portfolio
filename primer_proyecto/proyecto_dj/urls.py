@@ -41,7 +41,7 @@ urlpatterns = [
 #La llamamos media y la creamos en la raíz de nuestro proyecto
 #Luego en el archivo settings.py y abajo de todo añadimos dos variables, una para indicar la URL externa y otra para la carpeta interna donde se encuentran los archivos media.
 
-##Si queremos ver la imagen en nuestro servidore de desarrollo, tenemos que editar nuestro archivo urls.py, en este caso se usara solo en modo debug.
+##Si queremos ver la imagen en nuestro servidor de desarrollo, tenemos que editar nuestro archivo urls.py, en este caso se usara solo en modo debug.
 #Como resultado, Podemos crear un proyecto en nuestra herramienta de gestión de portfolio de forma completa, modificarlo y visualizarlo.
 from django.conf import settings
 if settings.DEBUG:
