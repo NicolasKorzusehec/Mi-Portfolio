@@ -13,5 +13,8 @@
 {% endblock %}
 <!-- indicamos que lo de abajo se dibuje despues del menu armado en la base-->
 {% block content %}
+<!-- agregamos dentro de la pagina el contador de visitas-->
+<p>Ha visitado esta pagina {{ num_visits }}{% if num_visits == 1 %} vez {% else %}
+veces {% endif %}.</p>
 {% endblock %}
 

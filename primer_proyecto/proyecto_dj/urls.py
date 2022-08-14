@@ -47,3 +47,10 @@ from django.conf import settings
 if settings.DEBUG:
     from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+# importamos la funcion include
+from django.urls import include
+
+#Agregamos las direcciones de autenticacion (login, logout, gestion password)
+path('accounts/',include('django.contrib.auth.urls'))
