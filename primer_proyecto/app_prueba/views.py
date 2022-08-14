@@ -31,9 +31,6 @@ def portfolio(request):
 def contact(request):
     return render(request, os.path.join("app_prueba","contact.html"))
 
-def contact(request):
-    return render(request, os.path.join("app_prueba","contact.html"))
-
 def registro(request):
     registro_form = RegistroForm
 
