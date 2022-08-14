@@ -25,6 +25,11 @@ from app_prueba import views as pruebas_views
 from portfolio import views as portfolio_views
 from contact import views as contact_views
 
+
+# importamos la funcion include
+from django.urls import include
+
+
 urlpatterns = [
     #Creamos un patrón url, en la raíz del sitio (cadena vacía) desde el que llamaremos 
     # a la vista views.home que tiene el nombre home.
@@ -33,7 +38,11 @@ urlpatterns = [
     path('portfolio/',portfolio_views.portfolio, name="portfolio"), 
     path('contact/',contact_views.contact, name="contact"), 
 
+
     path('admin/', admin.site.urls),
+    
+    #Agregamos las direcciones de autenticacion (login, logout, gestion password)
+    path('accounts/',include('django.contrib.auth.urls'))
 ]
 
 
@@ -49,8 +58,3 @@ if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-# importamos la funcion include
-from django.urls import include
-
-#Agregamos las direcciones de autenticacion (login, logout, gestion password)
-path('accounts/',include('django.contrib.auth.urls'))

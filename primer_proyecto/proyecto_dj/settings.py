@@ -127,8 +127,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-##settings.py
 import os
 # Media files
 MEDIA_URL = '/media/'    #carpeta interna donde se encuentran los archivos
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")  #URL externa
+
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'
+
+# Redirect to home URL after logout (Default redirects to /accounts/profile/)
+LOGOUT_REDIRECT_URL = '/'
