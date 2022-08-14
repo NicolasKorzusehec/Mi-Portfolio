@@ -137,3 +137,8 @@ LOGIN_REDIRECT_URL = '/'
 
 # Redirect to home URL after logout (Default redirects to /accounts/profile/)
 LOGOUT_REDIRECT_URL = '/'
+
+
+##settings.py
+#Test email
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

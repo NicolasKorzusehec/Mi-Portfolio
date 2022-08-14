@@ -1,5 +1,4 @@
 {% extends 'app_prueba/base.html' %}
-{% load static %}
 {% block title %}Iniciar sesión{% endblock %}
 {% block content %}
 <style>.errorlist{color:red;}</style>
@@ -26,7 +25,10 @@
                         </p>
                         <p><input type="submit" class="btn btn-primary btn-block"
                         value="Acceder"></p>
+
                 </form>
+                <!--Opción de olvido de contraseña-->
+                        <p><a href="{% url 'password_reset' %}">Olvido su contraseña?</a></p>
             </div>
         </div>
     </div>
