@@ -25,12 +25,6 @@ def home(request):
 def about(request):
     return render(request, os.path.join("app_prueba","about.html"))
 
-def portfolio(request):
-    return render(request, os.path.join("app_prueba","portfolio.html"))
-
-def contact(request):
-    return render(request, os.path.join("app_prueba","contact.html"))
-
 def registro(request):
     registro_form = RegistroForm
 

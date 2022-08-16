@@ -15,12 +15,6 @@ from django.contrib.auth.decorators import login_required
 #usamos el decorador
 @login_required
 def portfolio(request):
-    """ Prueba autenticacion usuarios
-    from django.shortcuts import HttpResponse
-    html_response = "<h1>Proyectos/h1>"
-    return HttpResponse(html_response)
-    """
-
     projects = Proyectos.objects.all() 
     return render(request, os.path.join("portfolio","portfolio.html"), {'projects': projects})
 
